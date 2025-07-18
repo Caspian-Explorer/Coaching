@@ -12,7 +12,7 @@ export default function ChatPage() {
     const res = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: input })
+      body: JSON.stringify({ message: input }),
     });
     const data = await res.json();
     setResponse(data.result);
@@ -34,7 +34,7 @@ export default function ChatPage() {
           type="submit"
           className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800"
         >
-          {loading ? 'Thinking...' : 'Ask AI'}
+          {loading ? 'Thinking…' : 'Ask AI'}
         </button>
       </form>
       {response && (
